@@ -1,0 +1,10 @@
+{
+  "name": "react-from-scratch",
+  "version": "1.0.0",
+  "description": "Testing reactJS application from scratch",
+  "main": "index.jsx",
+  "repository": "https://github.com/oceanBigOne/react-from-scratch",
+  "author": "oceanBigOne",
+  "license": "MIT",
+  "private": true
+}
