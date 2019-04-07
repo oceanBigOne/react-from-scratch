@@ -9,7 +9,8 @@ test('checkboxSwicth change on click', () => {
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
-    tree.children[0].props.onFocus();
+
+    component.getInstance().focus();
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
