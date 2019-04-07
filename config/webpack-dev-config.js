@@ -47,7 +47,7 @@ module.exports = merge(common, {
                 // look for .css or .scss files
                 test: /\.(css|scss)$/,
                 // in the `src` directory
-                include: [path.resolve(paths.appSrc)],
+                include: [ path.resolve(paths.appSrc)],
                 use: [
                     {
                         loader: "style-loader"
@@ -62,6 +62,8 @@ module.exports = merge(common, {
                             // generates a unique name for each class (e.g. app__app___2x3cr)
                             localIdentName: "[name]__[local]___[hash:base64:5]"
                         }
+                    },{
+                        loader:"sass-loader"
                     }
                     // Add additional loaders here. (e.g. sass-loader)
                 ]
