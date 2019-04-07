@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checkboxSwicth change on click 1`] = `
+<label
+  className=" switch"
+>
+  <input
+    onBlur={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="slider"
+  />
+</label>
+`;
+
+exports[`checkboxSwicth change on click 2`] = `
+<label
+  className="focused switch"
+>
+  <input
+    onBlur={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="slider"
+  />
+</label>
+`;
