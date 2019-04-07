@@ -20,6 +20,12 @@ test('checkboxSwicth change on click', () => {
     // re-rendering
     //tree = component.toJSON();
     //expect(tree).toMatchSnapshot();
+});
 
+test('adds 1 + 2 to equal 3', () => {
+    const component = renderer.create(
+        <CheckboxSwitch />,
+    );
 
+    expect(component.getInstance().sum(1, 2)).toBe(3);
 });

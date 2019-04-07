@@ -9,13 +9,18 @@ class CheckboxSwitch extends Component {
         }
     }
 
+    sum(a,b){
+        return a+b;
+    }
+
+
     render() {
         return (
             <label className={(this.state.focused?style.focused:"")+" "+style.switch} >
                 <input
                     type="checkbox"
                     id={this.props.id}
-                    onFocus={() => this.setState({ focused: true })}
+                    onFocus={() => { let sum=this.sum(2,3);this.setState({ focused: true })}}
                     onBlur={() => this.setState({ focused: false })}
                     name={this.props.name}
                     tabIndex={this.props.tabIndex}
