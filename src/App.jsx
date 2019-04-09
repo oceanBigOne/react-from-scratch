@@ -5,7 +5,7 @@ import style from "./css/app.css";
 import CheckboxSwitch from "./components/form/checkboxSwitch/CheckboxSwitch";
 
 const App = () => {
-    return <div className={style.app} >react Starter 🚀 <hr /><div><CheckboxSwitch id="test"/></div></div>;
+    return <div className={style.app} >react Starter 🚀 { API_URL }<hr /><div><CheckboxSwitch id="test"/></div></div>;
 };
 
 export default hot(module)(App);

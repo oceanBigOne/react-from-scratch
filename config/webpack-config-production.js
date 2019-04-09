@@ -5,12 +5,13 @@
 const path = require("path");
 
 const webpack = require("webpack");
+const environment_var = require("./env.production");
 const merge = require("webpack-merge");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const paths = require("./paths");
-const common = require("./webpack-common-config.js");
+const common = require("./webpack-config-common.js");
 
 module.exports = merge(common, {
     entry: {
@@ -34,7 +35,8 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify("production")
-            }
+            },
+            "API_URL" : JSON.stringify(environment_var.API_URL)
         }),
         // Extract text/(s)css from a bundle, or bundles, into a separate file.
         new ExtractTextPlugin("styles.css")

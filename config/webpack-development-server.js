@@ -5,7 +5,7 @@
 const WebpackDevServer = require("webpack-dev-server");
 const webpack = require("webpack");
 const paths = require("./paths");
-const config = require("./webpack-dev-config.js");
+const config = require("./webpack-config-development.js");
 
 // Change port to suit your preference
 const Port = 3000;

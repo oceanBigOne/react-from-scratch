@@ -3,12 +3,14 @@
 // configuration data related to development only
 
 const path = require("path");
+const environment_var = require("./env.development");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 
 const paths = require("./paths");
 // import common webpack config
-const common = require("./webpack-common-config.js");
+const common = require("./webpack-config-common.js");
+
 
 module.exports = merge(common, {
     entry: [paths.appIndexJs],
@@ -24,7 +26,8 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify("development")
-            }
+            },
+            "API_URL" : JSON.stringify(environment_var.API_URL)
         })
     ],
     module: {
